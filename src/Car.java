@@ -1,14 +1,14 @@
 public class Car extends Vehicle {
-    public Car(String modelName, int wheelsCount) {
-        super(modelName, wheelsCount);
+    @Override
+    public void setWheelsCount(int wheelsCount) {
+        if (wheelsCount == 4) {
+            super.setWheelsCount(wheelsCount);
+        }
     }
 
     @Override
     public void check() {
-        System.out.println("Обслуживаем " + this.getModelName());
-        for (int i = 0; i < this.getWheelsCount(); i++) {
-            this.updateTyre();
-        }
+        super.check();
         this.checkEngine();
     }
 }

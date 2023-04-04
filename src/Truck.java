@@ -1,14 +1,15 @@
 public class Truck extends Vehicle {
-    public Truck(String modelName, int wheelsCount) {
-        super(modelName, wheelsCount);
+
+    @Override
+    public void setWheelsCount(int wheelsCount) {
+        if (wheelsCount >= 6 && wheelsCount <= 10) {
+            super.setWheelsCount(wheelsCount);
+        }
     }
 
     @Override
     public void check() {
-        System.out.println("Обслуживаем " + this.getModelName());
-        for (int i = 0; i < this.getWheelsCount(); i++) {
-            this.updateTyre();
-        }
+        super.check();
         this.checkEngine();
         this.checkTrailer();
     }
