@@ -1,9 +1,8 @@
 public class Car extends Vehicle {
-    @Override
-    public void setWheelsCount(int wheelsCount) {
-        if (wheelsCount == 4) {
-            super.setWheelsCount(wheelsCount);
-        }
+    private static final int wheelsCount = 4;
+
+    public Car(String modelName) {
+        super(modelName, wheelsCount);
     }
 
     @Override

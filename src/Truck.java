@@ -1,10 +1,7 @@
 public class Truck extends Vehicle {
 
-    @Override
-    public void setWheelsCount(int wheelsCount) {
-        if (wheelsCount >= 6 && wheelsCount <= 10) {
-            super.setWheelsCount(wheelsCount);
-        }
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
     @Override

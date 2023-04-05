@@ -1,6 +1,11 @@
 public abstract class Vehicle {
-    private String modelName;
-    private int wheelsCount;
+    private final String modelName;
+    private final int wheelsCount;
+
+    public Vehicle(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
 
     public void updateTyre() {
 
@@ -24,11 +29,4 @@ public abstract class Vehicle {
         }
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
 }
